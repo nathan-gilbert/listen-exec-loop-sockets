@@ -40,12 +40,4 @@ class ThreadedServer():
 
 
 if __name__ == "__main__":
-    while True:
-        port_num = input("Port? ")
-        try:
-            port_num = int(port_num)
-            break
-        except ValueError:
-            pass
-
-    ThreadedServer('', port_num).listen()
+    ThreadedServer('', 5432).listen()
