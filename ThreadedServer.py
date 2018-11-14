@@ -23,7 +23,7 @@ class ThreadedServer():
             threading.Thread(target=self.listenToClient,
                              args=(client, address)).start()
 
-    def listenToClient(self, client):
+    def listenToClient(self, client, address):
         size = 1024
         while True:
             try:
